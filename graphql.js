@@ -38,7 +38,7 @@
     if (asJson) {
       var body = JSON.stringify({query: data.query, variables: data.variables});
     } else {
-      var body = "query=" + encodeURIComponent(data.query) + "&variables=" + encodeURIComponent(JSON.stringify(data.variables))
+      var body = data.query
     }
     if (typeof XMLHttpRequest != 'undefined') {
       var xhr = new XMLHttpRequest
